@@ -1,13 +1,14 @@
-// Conditionals
-
-// Sequential -- top to bottom
-
-// if else
-
 /*
-if (condition){
-// spme code - when condition is true
-}
+IF-ELSE STATEMENTS IN C++
+========================
+Conditionals allow us to make decisions in our code based on certain conditions.
+The if-else statement is the most basic form of conditional execution.
+
+Key Points:
+1. if can be used independently
+2. else cannot exist without an if
+3. We can have multiple else-if statements
+4. else is always at the end (optional)
 */
 
 #include <iostream>
@@ -15,154 +16,126 @@ using namespace std;
 
 int main()
 {
-    // int number = 40;
-    // if (number > 30)
-    // {
-    //     cout << "Number is greater than 30";
-    // }
+    cout << "=== IF-ELSE EXAMPLES ===\n"
+         << endl;
 
-    // int number = 40;
-    // if (number > 50)
-    // {
-    //     cout << "Number is greater than 30";
-    // }
-    // cout << "We will directly come here.As the condition is false";
+    // Example 1: Simple if statement
+    cout << "1. Simple if statement:" << endl;
+    int age = 18;
+    if (age >= 18)
+    {
+        cout << "   You are eligible to vote!" << endl;
+    }
+    cout << endl;
 
-    // int number = 60; // Change the number to see different output
-    // if (number > 50)
-    // {
-    //     // This will execute if the condition is True
-    //     cout << "Number is greater than 50";
-    // }
-    // else
-    // {
-    //     // This will execute if the condition is False
-    //     cout << "Number is less than 50";
-    // }
+    // Example 2: if-else statement
+    cout << "2. if-else statement:" << endl;
+    int temperature = 25;
+    if (temperature > 30)
+    {
+        cout << "   It's hot outside!" << endl;
+    }
+    else
+    {
+        cout << "   The weather is pleasant." << endl;
+    }
+    cout << endl;
 
-    // ---------------------- if else if else -------------
-    // int number = -30; // Change the number to see different output
-    // if (number > 0)
-    // {
-    //     // This will execute if the condition is True
-    //     cout << "Number is positive";
-    // }
-    // else if (number == 0)
-    // {
-    //     cout << "Number is zero";
-    // }
-    // else
-    // {
-    //     // This will execute if the condition is False
-    //     cout << "Number is negative";
-    // }
+    // Example 3: if-else if-else ladder
+    cout << "3. if-else if-else ladder:" << endl;
+    int score = 85;
+    char grade;
 
-    // if can be used independently
-    // else can't come without if
-    // We can have as many as else if between if and else
-    // else will always be at the end
+    if (score >= 90)
+    {
+        grade = 'A';
+        cout << "   Excellent! Grade: " << grade << endl;
+    }
+    else if (score >= 80)
+    {
+        grade = 'B';
+        cout << "   Good job! Grade: " << grade << endl;
+    }
+    else if (score >= 70)
+    {
+        grade = 'C';
+        cout << "   Average. Grade: " << grade << endl;
+    }
+    else if (score >= 60)
+    {
+        grade = 'D';
+        cout << "   Needs improvement. Grade: " << grade << endl;
+    }
+    else
+    {
+        grade = 'F';
+        cout << "   Failed. Grade: " << grade << endl;
+    }
+    cout << endl;
 
-    // Nested Conditions
+    // Example 4: Nested if-else statements
+    cout << "4. Nested if-else statements:" << endl;
+    int number = 42;
 
-    // int number = -301;
-    // if (number >= 0)
-    // {
-    //     if (number % 2 == 0)
-    //     {
-    //         cout << "Number is Even";
-    //     }
-    //     else
-    //     {
-    //         cout << "Number is Odd";
-    //     }
-    // }
-    // else
-    // {
-    //     cout << "Number is non-positive";
-    // }
+    if (number >= 0)
+    {
+        if (number == 0)
+        {
+            cout << "   The number is zero." << endl;
+        }
+        else if (number % 2 == 0)
+        {
+            cout << "   " << number << " is a positive even number." << endl;
+        }
+        else
+        {
+            cout << "   " << number << " is a positive odd number." << endl;
+        }
+    }
+    else
+    {
+        cout << "   " << number << " is a negative number." << endl;
+    }
+    cout << endl;
 
-    // int score = 30;
+    // Example 5: Multiple conditions using logical operators
+    cout << "5. Multiple conditions with logical operators:" << endl;
+    int time = 14; // 24-hour format
 
-    // if (score >= 90)
-    // {
-    //     cout << "You have got grade A.";
-    // }
-    // else if (score >= 80)
-    // {
-    //     cout << "You have got grade B.";
-    // }
-    // else if (score >= 70)
-    // {
-    //     cout << "You have got grade C.";
-    // }
-    // else if (score >= 60)
-    // {
-    //     cout << "You have got grade D.";
-    // }
-    // else if (score >= 50)
-    // {
-    //     cout << "You have got grade E.";
-    // }
-    // else
-    // {
-    //     cout << "You have failed the exam.";
-    // }
+    if (time >= 6 && time < 12)
+    {
+        cout << "   Good morning!" << endl;
+    }
+    else if (time >= 12 && time < 17)
+    {
+        cout << "   Good afternoon!" << endl;
+    }
+    else if (time >= 17 && time < 21)
+    {
+        cout << "   Good evening!" << endl;
+    }
+    else
+    {
+        cout << "   Good night!" << endl;
+    }
+    cout << endl;
 
-    // switch
-    // int day = 10;
-    // switch (day)
-    // {
-    // case 1:
-    //     cout << "Monday";
-    //     break;
-    // case 2:
-    //     cout << "Tuesday";
-    //     break;
-    // case 3:
-    //     cout << "Wednesday";
-    //     break;
-    // case 4:
-    //     cout << "Thursday";
-    //     break;
-    // case 5:
-    //     cout << "Friday";
-    //     break;
-    // case 6:
-    //     cout << "Saturday";
-    //     break;
-    // case 7:
-    //     cout << "Sunday";
-    //     break;
-    // default:
-    //     cout << "Please enter a valid day (1-7).";
-    // }
+    // Example 6: Checking for invalid input
+    cout << "6. Input validation example:" << endl;
+    int marks = 105;
 
-    // fallthrough
-    // break
+    if (marks < 0 || marks > 100)
+    {
+        cout << "   Error: Marks should be between 0 and 100!" << endl;
+    }
+    else if (marks >= 40)
+    {
+        cout << "   Congratulations! You passed with " << marks << " marks." << endl;
+    }
+    else
+    {
+        cout << "   Sorry! You failed with " << marks << " marks." << endl;
+    }
 
-    // int day = 5;
-    // switch (day)
-    // {
-    // case 1:
-    // case 2:
-    // case 3:
-    // case 4:
-    // case 5:
-    //     cout << "Weekdays";
-    //     break;
-    // case 6:
-    // case 7:
-    //     cout << "Weekends";
-    //     break;
-    // default:
-    //     cout << "Please enter a valid day (1-7).";
-    // }
-
-    // Ternary Operator
-
-    int number = 34;
-    // condition ? experession1 (if the condition is true) : expression2 (if the condition is false);
-    // (number % 2 == 0) ? cout << "Even" : cout << "Odd";
-
-    (number >= 0) ? (number % 2 == 0) ? cout << "Even and Positive" : cout << "Odd and Positive" : cout << "Negative";
+    return 0;
 }
