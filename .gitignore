@@ -1,0 +1,22 @@
+# Compiled object files
+*.o
+*.obj
+
+# Executables
+*.out
+*.exe
+a.out
+
+# Static libraries
+*.a
+
+
+# Debug symbol files (macOS)
+*.dSYM/
+
+# Build directories
+build/
+bin/
+
+# macOS system files
+.DS_Store
